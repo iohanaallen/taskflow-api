@@ -168,7 +168,7 @@ Como executar o projeto
 
 1\. Clonar o repositório
 
-&#x20;git clone https://github.com/iohanaallen/taskflow-api.git
+git clone https://github.com/iohanaallen/taskflow-api.git
 
 cd taskflow-api
 
@@ -176,25 +176,25 @@ cd taskflow-api
 
 2\. Restaurar dependências
 
-&#x20;dotnet restore
+dotnet restore
 
 
 
 3\. Aplicar migrations
 
-&#x20;dotnet ef database update
+dotnet ef database update
 
 
 
 4\. Executar a aplicação
 
-&#x20;dotnet run
+dotnet run
 
 
 
 5\. Acessar o Swagger
 
-&#x20;http://localhost:5186/swagger
+http://localhost:5186/swagger
 
 
 
@@ -204,13 +204,13 @@ Configuração JWT
 
 No arquivo appsettings.json, a API utiliza a seção:
 
-&#x20;"JwtSettings": {
+"JwtSettings": {
 
-&#x20; "SecretKey": "taskflowapi-super-secret-key-2026-minimo-32-caracteres",
+ "SecretKey": "taskflowapi-super-secret-key-2026-minimo-32-caracteres",
 
-&#x20; "Issuer": "TaskFlowApi",
+ "Issuer": "TaskFlowApi",
 
-&#x20; "Audience": "TaskFlowApiClient"
+ "Audience": "TaskFlowApiClient"
 
 }
 
@@ -218,15 +218,15 @@ No arquivo appsettings.json, a API utiliza a seção:
 
 Fluxo de autenticação
 
-&#x20;Registrar usuário em POST /api/Auth/register
+Registrar usuário em POST /api/Auth/register
 
-&#x20;Fazer login em POST /api/Auth/login
+Fazer login em POST /api/Auth/login
 
-&#x20;Copiar o token retornado
+Copiar o token retornado
 
-&#x20;Clicar em Authorize no Swagger
+Clicar em Authorize no Swagger
 
-&#x20;Informar o token no campo de autenticação
+Informar o token no campo de autenticação
 
 
 
@@ -236,11 +236,11 @@ Auth
 
 
 
-&#x20;POST /api/Auth/register
+POST /api/Auth/register
 
-&#x20;POST /api/Auth/login
+POST /api/Auth/login
 
-&#x20;GET /api/Auth/profile
+GET /api/Auth/profile
 
 
 
@@ -248,25 +248,25 @@ Tasks
 
 
 
-&#x20;POST /api/Tasks
+POST /api/Tasks
 
-&#x20;GET /api/Tasks
+GET /api/Tasks
 
-&#x20;GET /api/Tasks/{id}
+GET /api/Tasks/{id}
 
-&#x20;PUT /api/Tasks/{id}
+PUT /api/Tasks/{id}
 
-&#x20;DELETE /api/Tasks/{id}
+DELETE /api/Tasks/{id}
 
-&#x20;GET /api/Tasks/status/{status}
+GET /api/Tasks/status/{status}
 
-&#x20;GET /api/Tasks/priority/{priority}
+GET /api/Tasks/priority/{priority}
 
-&#x20;GET /api/Tasks/overdue
+GET /api/Tasks/overdue
 
-&#x20;PATCH /api/Tasks/{id}/complete
+PATCH /api/Tasks/{id}/complete
 
-&#x20;PATCH /api/Tasks/{id}/reopen
+PATCH /api/Tasks/{id}/reopen
 
 
 
@@ -274,15 +274,15 @@ Tasks
 
 Exemplo de criação de tarefa:
 
-&#x20;{
+{
 
-&#x20; "titulo": "Finalizar README do projeto",
+ "titulo": "Finalizar README do projeto",
 
-&#x20; "descricao": "Escrever documentação completa do TaskFlowApi",
+ "descricao": "Escrever documentação completa do TaskFlowApi",
 
-&#x20; "prioridade": "Alta",
+ "prioridade": "Alta",
 
-&#x20; "dataLimite": "2026-03-31T18:00:00"
+ "dataLimite": "2026-03-31T18:00:00"
 
 }
 
@@ -292,35 +292,35 @@ Exemplo de criação de tarefa:
 
 Regras de negócio implementadas
 
-&#x20;Cada usuário só pode visualizar e gerenciar as próprias tarefas
+Cada usuário só pode visualizar e gerenciar as próprias tarefas
 
-&#x20;O título da tarefa é obrigatório
+O título da tarefa é obrigatório
 
-&#x20;Prioridade aceita apenas: Baixa, Media e Alta
+Prioridade aceita apenas: Baixa, Media e Alta
 
-&#x20;Status aceita apenas: Pendente, EmAndamento e Concluida
+Status aceita apenas: Pendente, EmAndamento e Concluida
 
-&#x20;Apenas tarefas concluídas podem ser reabertas
+Apenas tarefas concluídas podem ser reabertas
 
-&#x20;Tarefas atrasadas podem ser filtradas por endpoint específico
+Tarefas atrasadas podem ser filtradas por endpoint específico
 
 
 
 Melhorias futuras
 
-&#x20;Paginação e ordenação
+Paginação e ordenação
 
-&#x20;Filtro por data
+Filtro por data
 
-&#x20;Roles de usuário
+Roles de usuário
 
-&#x20;PostgreSQL
+PostgreSQL
 
-&#x20;Docker
+Docker
 
-&#x20;Deploy em nuvem
+Deploy em nuvem
 
-&#x20;Testes unitários com xUnit
+Testes unitários com xUnit
 
 
 
